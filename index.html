@@ -1,47 +1,68 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-</head>
-<body style="background-color: rgb(210, 220, 182);">
-    <! -- This is a comment -->
-    <h1>My First Heading</h1>
-    <h2>My Second Heading</h2>
-    <h3>My Third Heading</h3>
-    <p>This is a paragraph.</p>
-    <a href="https://www.google.com" target="_blank"><b>Visit Google</a>
-    <img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" width="100" height="100">
-    <p style="font-size: 10px;"><b>mai yark rean yoyyy.</p>   
-    <p>This is<br>Hello world<br>with line breaks.</p>
-    table, th, td {
-  border:1px solid black;
-}
-</style>
-<body>
+    <link rel="stylesheet" href="styles.css">
 
-<h2>A basic HTML table</h2>
-    
-    <table style="width:100%">
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
-    
-    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Register form
+        </div>
+        <div class="flex form-input">
+            <div class="header-form">ชื่อ</div>
+            <input class="form" name="firstname" type="text">
+        </div>
+        <div class="flex form-input">
+            <div class="header-form">นามสกุล</div>
+            <input class="form" name="lastname" type="text">
+        </div>
+        <div class="flex form-input">
+            <div class="header-form">อายุ</div> 
+            <input class="form" name="age" type="number" min="0" max="100">
+        </div>
+        <div class="flex gender form-input">
+            <div class="header-form">เพศ</div> 
+            <div class="flex">
+                <div>
+                    <input name="gender" type="radio" value="ชาย"> ชาย
+                </div>
+                <div>
+                    <input name="gender" type="radio" value="หญิง"> หญิง
+                </div>
+                <div>
+                    <input name="gender" type="radio" value="อื่นๆ"> อื่นๆ
+                </div>
+            </div>
+        </div>
+        <div class="form-input">
+            งานอดิเรก
+            <div>
+                <input name="interests" type="checkbox" value="อ่านหนังสือ"> อ่านหนังสือ
+            </div>
+            <div>
+                <input name="interests" type="checkbox" value="ดูหนัง"> ดูหนัง
+            </div>
+            <div>
+                <input name="interests" type="checkbox" value="ฟังเพลง"> ฟังเพลง
+            </div>
+        </div>
+        <div class="form-input">
+            คำอธิบาย
+            <textarea name="description"></textarea>
+        </div>
+        <div id = "message" class="massage">
+            hi
+        </div>
+        <div class="center">
+            <button onclick="submitData()" class="button">ส่งข้อมูล</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
